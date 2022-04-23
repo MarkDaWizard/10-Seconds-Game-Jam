@@ -62,7 +62,7 @@ public class SoundManagerScript : MonoBehaviour
         {
             case ("MainMenuScene"):
                 Debug.Log("menu");
-                if (victoryMusic.isPlaying)
+                if (victoryMusic.isPlaying || defeatMusic.isPlaying || gameMusic.isPlaying)
                     StopAllMusic();
                 if (!menuMusic.isPlaying)
                     menuMusic.Play();

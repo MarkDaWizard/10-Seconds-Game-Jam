@@ -74,7 +74,9 @@ public class PlayerHUDScript : MonoBehaviour
         if (currentLevel != 8)
             SceneManager.LoadScene(nextLevel);
         else
+        {
             SceneManager.LoadScene("WinScene");
+        }
     }
 
     public void OnLButton(InputValue value)
@@ -105,6 +107,9 @@ public class PlayerHUDScript : MonoBehaviour
 
     public void OnPauseUIReturnButtonClicked()
     {
+        Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         SceneManager.LoadScene("MainMenuScene");
     }
 }
